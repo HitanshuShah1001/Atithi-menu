@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Header from "./Components/Header";
+import Navigateto from "./Components/Button/Navigateto";
+import { styles } from "./styles";
+import Atithi from "./assets/table.jpg";
 
 function App() {
+  const myStyle = {
+    backgroundImage: `url(${Atithi})`,
+    height: "100vh",
+    display: "flex",
+    flex: 1,
+    flexDirection: "column",
+    fontSize: "50px",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    justifyContent: "center",
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={myStyle}>
+      <Header />
+      <Navigateto />
     </div>
   );
 }
